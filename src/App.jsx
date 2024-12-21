@@ -59,25 +59,33 @@ function App() {
 
 				<div className="flex px-8 lg:px-12 gap-12 lg:flex-row flex-col text-slate-800">
 					<section className="flex flex-col gap-2 flex-1">
-						<h2 className="text-2xl font-bold mt-4 mb-2 ">Catatan Aktif</h2>
-						<NoteList
-							notes={filteredNotes}
-							onDelete={(id) => deleteNote(id, false)}
-							onToggleArchive={(id) => toggleArchive(id, false)}
-							isArchived={false}
-							formatDate={showFormattedDate}
-						/>
+						<h2 className="text-2xl font-bold mt-4 mb-2 ">Active Notes</h2>
+						{filteredNotes.length === 0 ? (
+							<p className="text-gray-500 italic">there's no active notes</p>
+						) : (
+							<NoteList
+								notes={filteredNotes}
+								onDelete={(id) => deleteNote(id, false)}
+								onToggleArchive={(id) => toggleArchive(id, false)}
+								isArchived={false}
+								formatDate={showFormattedDate}
+							/>
+						)}
 					</section>
 
 					<section className="flex flex-col gap-2 flex-1">
-						<h2 className="text-2xl font-bold mt-4 mb-2 ">Arsip</h2>
-						<NoteList
-							notes={filteredArchivedNotes}
-							onDelete={(id) => deleteNote(id, true)}
-							onToggleArchive={(id) => toggleArchive(id, true)}
-							isArchived={true}
-							formatDate={showFormattedDate}
-						/>
+						<h2 className="text-2xl font-bold mt-4 mb-2 ">Archived Notes</h2>
+						{filteredArchivedNotes.length === 0 ? (
+							<p className="text-gray-500 italic">there's no archived notes</p>
+						) : (
+							<NoteList
+								notes={filteredArchivedNotes}
+								onDelete={(id) => deleteNote(id, true)}
+								onToggleArchive={(id) => toggleArchive(id, true)}
+								isArchived={true}
+								formatDate={showFormattedDate}
+							/>
+						)}
 					</section>
 				</div>
 			</main>
