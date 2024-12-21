@@ -1,8 +1,17 @@
-# React + Vite
+# takeurnoteboi. 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+takeurnoteboi. is a React-based note-taking web application that helps you manage and organize your notes efficiently. It includes features like adding, deleting, searching, and archiving notes with a sleek and user-friendly design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🖊 **Add Notes**: Create notes with a title (50-character limit) and detailed body.
+- 🔍 **Search Notes**: Quickly find active or archived notes by title.
+- 📂 **Archive Notes**: Move notes between active and archived sections.
+- 🗑 **Delete Notes**: Remove notes permanently with a single click.
+- ⏱ **Date Tracking**: Automatically logs the creation date for each note.
+
+## Technologies Used
+
+- React
+- Tailwind CSS
+- JavaScript (ES6+)
